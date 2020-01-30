@@ -1,0 +1,57 @@
+{
+    "name":"CFMLChallenge",
+    "version":"0.1.0",
+    "author":"Gavin Pickin <gavin@ortussolutions.com>",
+    "shortDescription":"Run your CFML challenges in TestBox",
+    "description":"",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{},
+    "documentation":"",
+    "homepage":"",
+    "ignore":[
+        "**/.*",
+        "/test/",
+        "/tests/"
+    ],
+    "installPaths":{},
+    "instructions":"",
+    "keywords":[],
+    "license":[
+        {
+            "type":"",
+            "URL":""
+        }
+    ],
+    "location":"ForgeboxStorage",
+    "private":false,
+    "repository":{
+        "type":"",
+        "URL":""
+    },
+    "scripts":{
+        "postVersion":"package set location='LearnCF/CFMLChallenge#v`package version`' && echo 'v`package version`' > .version && !git add .version && !git commit -m \"Bump the Version\"",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "slug":"cfmlchallenge",
+    "testbox":{
+        "bundles":"",
+        "directory":"tests.specs",
+        "labels":"",
+        "options":{},
+        "recurse":true,
+        "reporter":"",
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "testBundles":"",
+        "testSpecs":"",
+        "testSuites":"",
+        "verbose":true,
+        "watchDelay":500,
+        "watchPaths":"**.cfc"
+    }
+}
