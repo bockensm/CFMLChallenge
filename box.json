@@ -1,6 +1,6 @@
 {
     "name":"CFMLChallenge",
-    "version":"0.1.0",
+    "version":"0.3.0",
     "author":"Gavin Pickin <gavin@ortussolutions.com>",
     "shortDescription":"Run your CFML challenges in TestBox",
     "description":"",
@@ -23,16 +23,16 @@
             "URL":""
         }
     ],
-    "location":"ForgeboxStorage",
+    "location":"LearnCF/CFMLChallenge#v0.3.0",
     "private":false,
     "repository":{
         "type":"",
         "URL":""
     },
     "scripts":{
-        "postVersion":"package set location='LearnCF/CFMLChallenge#v`package version`' && echo 'v`package version`' > .version && !git add .version && !git commit -m \"Bump the Version\"",
+        "postVersion":"package set location='LearnCF/CFMLChallenge#v`package version`' && echo 'v`package version`' > .version && !git add .version && git commit -m \"Bump the Version\"",
         "onRelease":"publish",
-        "postPublish":"!git push && !git push --tags"
+        "postPublish":"!git push && git push --tags"
     },
     "slug":"cfmlchallenge",
     "testbox":{
