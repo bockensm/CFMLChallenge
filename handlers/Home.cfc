@@ -20,7 +20,7 @@ component{
 			instructions: "Bla bla bla."
 		}];
 
-		var testURL = "http://127.0.0.1:51741/modules/CFMLChallenge/tests/runner.cfm?reporter=json";
+		var testURL = "http://127.0.0.1:#cgi.server_port#/tests/runner.cfm?reporter=json";
 		cfhttp( url = testURL, method="GET", result="testResults" );
 		prc.testStats = DeSerializeJSON( testResults.filecontent );
 
